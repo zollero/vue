@@ -24,6 +24,7 @@ const weexFactoryPlugin = {
   }
 }
 
+// 处理不同平台的路径的“入口路径”，有 web, server, weex 等
 const aliases = require('./alias')
 const resolve = p => {
   const base = p.split('/')[0]
@@ -34,6 +35,7 @@ const resolve = p => {
   }
 }
 
+// 配置不同的输出类型
 const builds = {
   // Runtime only (CommonJS). Used by bundlers e.g. Webpack & Browserify
   'web-runtime-cjs': {

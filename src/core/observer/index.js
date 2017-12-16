@@ -17,6 +17,14 @@ import {
 const arrayKeys = Object.getOwnPropertyNames(arrayMethods)
 
 /**
+ * Observer 观察者
+ * 1. 新建一个基于 Object 的观察者实例
+ * 2. 在要观察的 Object 中，添加 __ob__ 属性
+ * 3. 对该 Object 的每个属性，都重新设置 setter/getter
+ * 4. 监听数据变化，并在 setter 中，通知依赖函数去修改 view
+ */
+
+/**
  * By default, when a reactive property is set, the new value is
  * also converted to become reactive. However when passing down props,
  * we don't want to force conversion because the value may be a nested value
